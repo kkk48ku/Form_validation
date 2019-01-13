@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,
+	minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>用户注册表单</title>
+	<link href="https://cdn.bootcss.com/normalize/8.0.1/normalize.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="wrap wrap-sm">
+		<div class="header">
+			<h1>用户注册表单</h1>
+		</div>
+		<div class="form">
+			<form id="signup" >
+				<div class="input-wrap">
+					<input title="请输入姓名" data-rule='maxlength:4|minlength:1|pattern:"^[\u4e00-\u9fa5]+(·[\u4e00-\u9fa5]+)*$"'
+					       name="name"
+					       placeholder="请输入姓名"
+					       type="text" class="input-control">
+					<div id="name-input-error" class="input-error">姓名格式有误</div>
+				</div>
+				<div class="input-wrap">
+					<input title="请输入用户名，必须是字母或数字，最多10位" data-rule='pattern:"^[a-z0-9]*$"|maxlength:10|minlength:4'
+					       name="username"
+					       placeholder="请输入用户名，必须是字母或数字，最多10位"
+					       type="text" class="input-control">
+					<div id="username-input-error" class="input-error">用户名格式有误，必须为字母或数字</div>
+				</div>
+				<div class="input-wrap">
+					<input title="请输入年龄，最小18岁，最大99岁" data-rule='min:18|max:99'
+					       name="age"
+					       placeholder="请输入年龄，最小18岁，最大99岁"
+					       type="text" class="input-control">
+					<div id="age-input-error" class="input-error">年龄必须为数字，最小不得小于18岁，最大不得超过99岁</div>
+				</div>
+				<div class="input-wrap">
+					<input title="请输入密码，最少不得少于6位，最多不得超过12位" data-rule='minlength:6|maxlength:12'
+					       name="password"
+					       placeholder="请输入密码，最少6位，最多12位"
+					       type="password" class="input-control">
+					<div id="password-input-error" class="input-error">密码格式有误</div>
+				</div>
+				<div class="input-wrap">
+					<input title="请再次输入密码" data-rule='password:true'
+					       name="passwordtwo"
+					       placeholder="请再次输入密码"
+					       type="password" class="input-control">
+					<div id="passwordtwo-input-error" class="input-error">两次密码不一致</div>
+				</div>
+				<div class="input-wrap">
+					<input title="请输入自我介绍，最多100字" data-rule='required:false|maxlength:100'
+					       name="intro"
+					       placeholder="请输入自我介绍，最多100字"
+					       type="text" class="input-control">
+					<div id="intro-input-error" class="input-error">自我介绍格式有误，最多输入100个字符</div>
+				</div>
+				<button class="button-control" type="submit">注册</button>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/validator.js"></script>
+	<script type="text/javascript" src="js/input.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
